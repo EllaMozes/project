@@ -17,7 +17,7 @@ pipeline {
         stage('diff') {
             steps {
                 echo "cloning github repo"
-                sh "git diff --no-index ${env.BRANCH_NAME} master"
+                sh "git diff --no-index EllaMozes/${env.BRANCH_NAME} EllaMozes/master"
             }
         }
     }
