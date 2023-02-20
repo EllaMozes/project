@@ -20,7 +20,6 @@ pipeline {
                 sh "git diff --origin/main"
             }
         }
-        
     }
 }
 
