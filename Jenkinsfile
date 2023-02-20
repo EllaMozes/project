@@ -11,26 +11,16 @@ pipeline {
         stage('Test') {
             steps {
                 echo 'Testing..'
-                echo 'Running pytest..'
+                sh "ls -la"
             }
         }
-        stage('Build') {
+        stage('clone') {
             steps {
-                echo 'Building..'
-                echo 'Running docker build -t sntshk/cotu .'
-            }
-        }
-        stage('Publish') {
-            steps {
-                echo 'Publishing..'
-                echo 'Running docker push..'
-            }
-        }
-        stage('Cleanup') {
-            steps {
-                echo 'Cleaning..'
-                echo 'Running docker rmi..'
+                echo "cloning github repo"
+                sh "git clone https://github.com/EllaMozes/project.git"
+                sh "ls -la"
             }
         }
     }
 }
+
