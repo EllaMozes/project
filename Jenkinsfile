@@ -14,11 +14,10 @@ pipeline {
                 sh "ls -la"
             }
         }
-        stage('clone') {
+        stage('diff') {
             steps {
                 echo "cloning github repo"
-                sh "git diff ${env.BRANCH_NAME} master"
-                sh "ls -la"
+                sh "git diff --no-index ${env.BRANCH_NAME} master"
             }
         }
     }
