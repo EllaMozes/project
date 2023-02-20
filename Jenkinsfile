@@ -17,7 +17,7 @@ pipeline {
         stage('diff') {
             steps {
                 echo "cloning github repo"
-                sh "git diff Ellamozes/${env.BRANCH_NAME} -- Ellamozes/main"
+                sh "git diff --Ellamozes/${env.BRANCH_NAME} --Ellamozes/main"
             }
         }
     }
