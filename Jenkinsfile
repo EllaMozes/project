@@ -17,7 +17,7 @@ pipeline {
         stage('diff') {
             steps {
                 echo "cloning github repo"
-                sh "git diff --origin/main"
+                sh "git diff origin/main"
             }
         }
     }
