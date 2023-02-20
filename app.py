@@ -8,6 +8,8 @@ app = Flask(__name__)
 
 START = time.time()
 
+
+
 def elapsed():
     running = time.time() - START
     minutes, seconds = divmod(running, 60)
