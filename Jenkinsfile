@@ -11,7 +11,13 @@ pipeline {
         stage('Test') {
             steps {
                 echo 'Testing..'
-                ls -la
+                sh "ls -la"
+            }
+        }
+        stage('Test') {
+            steps {
+                echo "cloning github repo"
+                sh "git clone https://github.com/EllaMozes/project.git"
             }
         }
     }
