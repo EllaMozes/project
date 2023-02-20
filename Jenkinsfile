@@ -17,10 +17,9 @@ pipeline {
         stage('clone') {
             steps {
                 echo "cloning github repo"
-                sh "git clone https://github.com/EllaMozes/project.git"
+                sh "git diff ${env.BRANCH_NAME} master"
                 sh "ls -la"
             }
         }
     }
 }
-
