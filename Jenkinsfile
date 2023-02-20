@@ -14,11 +14,10 @@ pipeline {
                 sh "ls -la"
             }
         }
-        stage('clone') {
+        stage('diff') {
             steps {
                 echo "cloning github repo"
-                sh "git clone https://github.com/EllaMozes/project.git"
-                sh "ls -la"
+                sh "git diff Ellamozes/${env.BRANCH_NAME} Ellamozes/main"
             }
         }
     }
