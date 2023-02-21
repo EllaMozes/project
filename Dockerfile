@@ -1,6 +1,5 @@
 FROM robd003/python3.9
 RUN rm /bin/sh && ln -s /bin/bash /bin/sh
-ENTRYPOINT [ "sh", "entrypoint.sh" ]
 # RUN apt-get update && apt-get upgrade -y && apt-get install python3.9 python3.9-venv -y 
 EXPOSE 5000
 WORKDIR /usr/app
