@@ -2,7 +2,7 @@ FROM robd003/python3.9
 RUN rm /bin/sh && ln -s /bin/bash /bin/sh
 
 # RUN apt-get update && apt-get upgrade -y && apt-get install python3.9 python3.9-venv -y 
-EXPOSE 8080
+EXPOSE 5000
 WORKDIR /usr/app
 COPY requirments.txt requirments.txt  
 RUN python3.9 -m venv venv
